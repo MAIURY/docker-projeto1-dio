@@ -6,6 +6,109 @@
     <title>Hello World - DIO</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 90%;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            animation: pulse 2s infinite;
+        }
+        p {
+            font-size: 1.4rem;
+            margin: 1rem 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            color: #e0e0e0;
+        }
+        .dio-badge {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 2rem;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(238, 90, 36, 0.3);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .emoji {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="emoji">🚀</span>
+        <h1>Hello World!</h1>
+        <p>Servidor Apache rodando com Docker Compose</p>
+        <p>Containerização com Docker na prática</p>
+        <div class="dio-badge">
+            🎯 Desafio DIO - Concluído!
+        </div>
+    </div>
+
+    <script>
+        // Efeito de digitação no título (opcional)
+        const title = document.querySelector('h1');
+        const originalText = title.textContent;
+        title.textContent = '';
+        
+        let i = 0;
+        function typeWriter() {
+            if (i < originalText.length) {
+                title.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        // Iniciar efeito após 0.5 segundos
+        setTimeout(typeWriter, 500);
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - DIO</title>
+    <style>
+        body {
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             height: 100vh;
