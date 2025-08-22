@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  apache-server:
+    image: httpd:latest
+    container_name: apache-dio
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/usr/local/apache2/htdocs/
+    restart: unless-stopped
+    networks:
+      - apache-network
+
+networks:
+  apache-network:
+    driver: bridge
